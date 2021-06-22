@@ -148,7 +148,7 @@ static NSError *YouTubeError(NSError *error, NSSet *regionsAllowed, NSString *la
 	{
 		NSString *eventLabel = [self.eventLabels objectAtIndex:0];
 		[self.eventLabels removeObjectAtIndex:0];
-		NSString *eurl = @"https%3A%2F%2Fyoutube.googleapis.com%2Fv%2svideoId&html5=1&c=TVHTML5&cver=6.20180913"
+		NSString *eurl = @"https%3A%2F%2Fyoutube.googleapis.com%2Fv%2svideoId&html5=1&c=TVHTML5&cver=6.20180913";
     eurl = [eurl stringByReplacingOccurrencesOfString:@"videoId" withString: self.videoIdentifier];
 		NSDictionary *query = @{ @"video_id": self.videoIdentifier, @"hl": self.languageIdentifier, @"el": eventLabel, @"ps": @"default", @"eurl" : eurl};
 		NSString *queryString = XCDQueryStringWithDictionary(query);
